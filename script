@@ -1,0 +1,4 @@
+bonjour(){
+echo "Hello World, $1, le deuxieme para est $2"
+ }
+bonjour $1 $2

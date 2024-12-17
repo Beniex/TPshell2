@@ -1,0 +1,4 @@
+creationFichier(){
+test -e $1 && vi $1 || (touch $1; vi $1)
+ }
+creationFichier $1

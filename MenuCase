@@ -1,0 +1,25 @@
+afficherMenu(){ 
+echo "Saisissez au clavier l'option desiree"
+echo "1 crée et exécute test3"
+echo "2 detruit test3"
+echo "3 crée les fichier test avec date actuelle"
+echo "4 afficher le contenu du repo" 
+}
+
+saisirChoix(){
+read choixSaisie
+echo "vous avez saisi $choixSaisie"
+case "$choixSaisie" in 
+1)(echo 'test3a ete executé' | tee test3 & chmod 700 test3 & ./test3);;
+2)rm test3;;
+3)PATH=$PATH:. whereis test3 | awk '{print $2}' | xargs -I {} cp {} $(dirname {})/test$(date +"%Y%m%d%H%M%S");;
+4)ls;;
+?)echo "le reste";; 
+esac
+}
+
+while true
+do 
+afficherMenu
+saisirChoix
+done
