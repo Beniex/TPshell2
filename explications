@@ -1,0 +1,8 @@
+petit TP de manipulation du shell réalisé sur le bureau virtuel de l'insa (bv.insa) 
+je me suis amusé à créer des fichier txt contenant des fonctions qui sont appelées dans le meme fichier. 
+
+Notes sur MenuCase :
+1) le whereis cherche dans les fichiers système mais pas de la répertoire courant si on ne lui redefinie pas PATH
+2) le traitement des entrées clavier n'est pas très précis, on peut pas tester que l'entrée est un entier. tout est traité en chaine de caractères regex 
+Il faut bien se rappeler que le shell est fait pour modifier un arbre de processus et un arbre de fichiers donc pas de traitement de haut niveau des IHM 
+3) case 3) je me suis amusé à faire des chaine de commandes avec pipes avec un whereis et un création dynamique de nom de fichier
